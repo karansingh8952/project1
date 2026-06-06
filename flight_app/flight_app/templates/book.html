@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Book Flight</h2>
+
+    <p>
+    Flight: {{flight[1]}} <br>
+    Route: {{flight[2]}} → {{flight[3]}} <br>
+    Price: ₹{{flight[6]}}
+    </p>
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Passenger Name"><br>
+        <button type="submit">Confirm Booking</button>
+    </form>
+</div>
+
+</body>
+</html>

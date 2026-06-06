@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Search Flights</h2>
+
+    <form method="POST">
+        <input type="text" name="source" placeholder="Source">
+        <input type="text" name="destination" placeholder="Destination">
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    {% for f in flights %}
+        <p>
+            {{f[1]}} | {{f[2]}} → {{f[3]}} | ₹{{f[6]}}
+            <a href="/book/{{f[0]}}">Book</a>
+        </p>
+    {% endfor %}
+</div>
+
+</body>
+</html>

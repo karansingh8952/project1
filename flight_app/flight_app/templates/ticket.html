@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Ticket</h2>
+
+    <p>Passenger: {{booking[1]}}</p>
+    <p>Flight: {{booking[2]}}</p>
+    <p>Route: {{booking[3]}}</p>
+    <p>Price: ₹{{booking[4]}}</p>
+
+    <a href="/dashboard">Back to Dashboard</a>
+</div>
+
+</body>
+</html>
