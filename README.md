@@ -1,150 +1,78 @@
 # ✈️ Flight Booking System
 
-![Banner](screenshots/banner.png)
+A simple Flight Booking System built using **Python Flask** and **SQLite**. This web application allows users to register, log in, search flights, book tickets, and view booking details.
 
-## 📖 Overview
-
-The Flight Booking System is a web-based application developed using **Python Flask** and **SQLite**. The system allows users to register, log in, search available flights, book tickets, and generate booking confirmations.
-
-This project demonstrates CRUD operations, database management, user authentication, session handling, and dynamic web page rendering using Flask.
-
----
-
-## 🚀 Features
-
-### User Module
+## Features
 
 * User Registration
-* User Login
-* User Logout
+* User Login & Logout
+* Add New Flights
+* Search Flights by Source and Destination
+* Book Flight Tickets
+* Generate Booking Tickets
+* SQLite Database Integration
 * Session Management
 
-### Flight Module
+## Technologies Used
 
-* Add New Flights
-* Store Flight Details in Database
-* Search Flights by Source and Destination
+* Python 3
+* Flask
+* SQLite3
+* HTML
+* CSS
+* Jinja2 Templates
 
-### Booking Module
+## Project Structure
 
-* Book Flight Tickets
-* Generate Booking Confirmation
-* View Ticket Details
-
-### Database Module
-
-* SQLite Database Integration
-* Automatic Table Creation
-
----
-
-## 🖼️ Screenshots
-
-### Login Page
-src="login.png"
-
-### Registration Page
-
-![Registration Page](screenshots/register.png)
-
-### Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
-### Add Flight Page
-
-![Add Flight](screenshots/add_flight.png)
-
-### Search Flights
-
-![Search Flights](screenshots/search.png)
-
-### Flight Booking
-
-![Flight Booking](screenshots/book.png)
-
-### Ticket Generation
-
-![Ticket](screenshots/ticket.png)
-
----
-
-## 🛠️ Technologies Used
-
-| Technology | Purpose             |
-| ---------- | ------------------- |
-| Python     | Backend Development |
-| Flask      | Web Framework       |
-| SQLite3    | Database            |
-| HTML       | Frontend Structure  |
-| CSS        | Styling             |
-| Jinja2     | Template Engine     |
-
----
-
-## 📂 Project Structure
-
-```text
+```
 FlightBookingSystem/
 │
 ├── app.py
 ├── database.db
-├── README.md
 │
-├── screenshots/
-│   ├── banner.png
-│   ├── login.png
-│   ├── register.png
-│   ├── dashboard.png
-│   ├── add_flight.png
-│   ├── search.png
-│   ├── book.png
-│   └── ticket.png
+├── templates/
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   ├── add_flight.html
+│   ├── search.html
+│   ├── book.html
+│   └── ticket.html
 │
-└── templates/
-    ├── login.html
-    ├── register.html
-    ├── dashboard.html
-    ├── add_flight.html
-    ├── search.html
-    ├── book.html
-    └── ticket.html
+└── README.md
 ```
 
----
+## Installation
 
-## ⚙️ Installation
-
-### Clone Repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/flight-booking-system.git
-cd flight-booking-system
+git clone 
 ```
 
-### Install Dependencies
+### 2. Install Required Packages
 
 ```bash
 pip install flask
 ```
 
-### Run Application
+### 3. Run the Application
 
 ```bash
 python app.py
 ```
 
-### Open Browser
+### 4. Open Browser
 
-```text
+Visit:
+
+```
 http://127.0.0.1:5000
 ```
 
----
+## Database Tables
 
-## 🗄️ Database Schema
-
-### Users Table
+### Users
 
 | Column   | Type    |
 | -------- | ------- |
@@ -152,7 +80,7 @@ http://127.0.0.1:5000
 | username | TEXT    |
 | password | TEXT    |
 
-### Flights Table
+### Flights
 
 | Column      | Type    |
 | ----------- | ------- |
@@ -165,7 +93,7 @@ http://127.0.0.1:5000
 | price       | INTEGER |
 | date        | TEXT    |
 
-### Bookings Table
+### Bookings
 
 | Column    | Type    |
 | --------- | ------- |
@@ -175,56 +103,43 @@ http://127.0.0.1:5000
 | route     | TEXT    |
 | price     | INTEGER |
 
----
+## Application Routes
 
-## 🌐 Application Routes
+| Route        | Description    |
+| ------------ | -------------- |
+| /            | Login Page     |
+| /register    | Register User  |
+| /dashboard   | Dashboard      |
+| /add_flight  | Add Flight     |
+| /search      | Search Flights |
+| /book/<id>   | Book Flight    |
+| /ticket/<id> | View Ticket    |
+| /logout      | Logout User    |
 
-| Route        | Method    | Description       |
-| ------------ | --------- | ----------------- |
-| /            | GET, POST | User Login        |
-| /register    | GET, POST | User Registration |
-| /dashboard   | GET       | Dashboard         |
-| /add_flight  | GET, POST | Add Flight        |
-| /search      | GET, POST | Search Flights    |
-| /book/<id>   | GET, POST | Book Flight       |
-| /ticket/<id> | GET       | View Ticket       |
-| /logout      | GET       | Logout            |
+## Security Notice
 
----
+This project stores passwords in plain text for educational purposes only.
 
-## 🔒 Security Improvements
+For production applications:
 
-Current version stores passwords in plain text.
+* Use password hashing (Werkzeug/Bcrypt)
+* Enable CSRF protection
+* Add input validation
+* Use environment variables for secret keys
 
-Recommended enhancements:
-
-* Password Hashing (Werkzeug)
-* CSRF Protection
-* Input Validation
-* Admin Authentication
-* Role-Based Access Control
-
----
-
-## 🎯 Future Enhancements
+## Future Improvements
 
 * Admin Panel
 * Flight Cancellation
 * Seat Selection
 * Payment Gateway Integration
-* Email Notifications
+* Email Ticket Generation
 * PDF Ticket Download
 * Responsive UI Design
-* Flight Status Tracking
-* Multi-user Booking Support
 
----
+## Author
 
-## 👨‍💻 Author
-
-**Karan Singh Kushwaha**
-
-B.Tech Information Technology
+Karan Singh Kushwaha
 
 Arya College of Engineering & IT, Kukas
 
